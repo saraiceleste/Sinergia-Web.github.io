@@ -63,7 +63,7 @@ header, main, footer{
 
 /* CONTENEDOR DE PRODUCTOS*/
 .catalogo-contenedor{
-    padding: 20px;
+    padding: 70px;
 }
 
 /* TARJETA DEL PRODUCTO */
@@ -73,7 +73,7 @@ header, main, footer{
     border-radius: 15px;
     overflow: hidden;
     padding-bottom: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 80px rgba(0,0,0,0.1);
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
@@ -97,6 +97,7 @@ header, main, footer{
     font-size: 22px;
     font-weight: 700;
     margin-top: 10px;
+    color: #3f69f3;
 }
 
 /* DESCRIPCIÓN DEL PRODUCTO */
@@ -128,7 +129,7 @@ header, main, footer{
 }
 
 .producto-btn:hover{
-    background: #e00064;
+    background: #11398f;
 }
 
 /* SECCIONES GENERALES */
@@ -138,7 +139,8 @@ section{
 
 h2{
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 ul{
@@ -150,8 +152,27 @@ li{
     margin-bottom: 6px;
 }
 
+/*Servicios fotos*/
+#seccion-fotos{
+    box-sizing: border-box;
+    background-color: #11398f;
+    width: 100%;
+    padding-left: 160px;
+    padding-right: 160px;
+
+}
+
+.fotos-contenedorr{
+    background-color: #3f69f3;
+    border-radius: 45px;
+    text-align: center;
+    margin: 10px;
+}
+
+
 /* CONTACTO EN DOS COLUMNAS*/
 .contacto-section{
+    background-color: #11398f;
     margin-top: 40px;
 }
 

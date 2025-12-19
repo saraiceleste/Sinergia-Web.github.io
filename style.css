@@ -5,8 +5,8 @@
    - Aplica box-sizing: border-box para que el ancho incluya padding/border
 */
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -24,14 +24,27 @@ body{
 */
 header, main, footer{
     width: 100%;
-    max-width: 1200px;   /* puedes cambiarlo a 900, 1000, etc */
-    margin: 0 auto;
+
+}
+
+.top-banner{
+    background-color: #1e6d01;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 16px;
+    color: white;
 }
 
 /* NAV */
 .nav-principal{
     background-color: #11398f;
-    padding: 15px 25px;
+    padding: 20px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    list-style: none;
 
 }
 
@@ -42,11 +55,20 @@ header, main, footer{
 
 /* Menú de navegación */
 .nav-lista{
-    list-style: none;
+    padding: 1px 1px; 
+    text-decoration: none;
+    color: #3f69f3;
+    width: 100%;
+    font-weight: bold;
+    transition: .4s;
 }
 
 /* Estilo de los enlaces del menú */
 .nav-lista a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
     text-decoration: none;
     color:  #3f69f3;
     font-weight: bold;
@@ -54,7 +76,7 @@ header, main, footer{
 }
 
 .nav-lista a:hover{
-    color: #ff0084; /* color cuando pasas el cursor */
+    color: #f4e912; /* color cuando pasas el cursor */
 }
 
 #catalogo{
@@ -63,18 +85,26 @@ header, main, footer{
 
 /* CONTENEDOR DE PRODUCTOS*/
 .catalogo-contenedor{
-    padding: 70px;
+    padding: 10px 10px; 
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
 }
 
 /* TARJETA DEL PRODUCTO */
 .producto-tarjeta{
+    position: relative;
+    width: 600px;
     text-align: center;
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
-    padding-bottom: 20px;
-    box-shadow: 0px 4px 80px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    padding: 25px 30px 30px;
+    box-shadow: 0 4px 80px rgba(0,0,0,0.1);
     transition: transform .2s ease, box-shadow .2s ease;
+    /*para q la badge se posicione dentro*/
+
 }
 
 /* Efecto al pasar el mouse */
@@ -103,7 +133,7 @@ header, main, footer{
 /* DESCRIPCIÓN DEL PRODUCTO */
 .producto-desc{
     font-size: 14px;
-    color: #6d4c41;
+    color: #000000;
     margin: 10px 15px;
 }
 
@@ -111,7 +141,7 @@ header, main, footer{
 .producto-precio{
     font-size: 18px;
     font-weight: bold;
-    color: #11398f;
+    color: #a81414;
     margin-bottom: 10px;
 }
 
@@ -132,9 +162,21 @@ header, main, footer{
     background: #11398f;
 }
 
+.producto-badge{
+    /*posiciona mi span dentro de mi contender*/
+    position: absolute;
+    background-color: #f53523;
+    top: 10px;
+    left: 10px;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 10px;
+    z-index: 10;
+}
 /* SECCIONES GENERALES */
 section{
-    padding: 25px;
+    padding: 30px 30px 30px 30px;
+    margin: 0px 0px 0px 0px;
 }
 
 h2{
@@ -152,13 +194,19 @@ li{
     margin-bottom: 6px;
 }
 
+.letras-paquetes{
+    font-size: 14px;
+    color: #ffffff;
+    margin: 10px 15px;
+}
+
 /*Servicios fotos*/
 #seccion-fotos{
     box-sizing: border-box;
+    margin: 0px;
     background-color: #11398f;
     width: 100%;
-    padding-left: 160px;
-    padding-right: 160px;
+    padding: 20px 200px 20px 200px;
 
 }
 
@@ -166,15 +214,22 @@ li{
     background-color: #3f69f3;
     border-radius: 45px;
     text-align: center;
-    margin: 10px;
+    margin-bottom: 90px;
+    padding: 0px 0px 15px 0px;
+    
 }
 
+.titulo-paquetes{
+     font-size: 22px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #11398f;
+}
 
-/* CONTACTO EN DOS COLUMNAS*/
-.contacto-section{
+#contacto {
     background-color: #11398f;
-    margin-top: 40px;
 }
+
 
 /* FORMULARIO */
 .form-contacto{
@@ -189,6 +244,7 @@ li{
 
 #acerca{
     text-align: center;
+    padding-bottom: 50px;
 }
 
 
@@ -196,7 +252,7 @@ li{
 .form-contacto input,
 .form-contacto textarea{
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 6px;
 }
 
@@ -208,4 +264,24 @@ footer{
     margin-top: 30px;
     background-color: #11398f;
     color: #ffffff;
+}
+
+.boton-carrito{
+    /*fixed */
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #f0dc26;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 12px 20px;
+    color: #ffffff;
+    z-index: 1500;
+    box-shadow: 0 4px 12px ;
+    transition: .2s ease-in-out rgb(0,0,0,25);
+}
+
+.boton-carrito:hover{
+    background-color: #1e6d01;
 }

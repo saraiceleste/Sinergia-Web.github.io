@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+}
+
+.section-left,
+.section-center,
+.section-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.searcher {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 570px;
+  height: 40px;
+}
+
+.searcher input {
+  flex-grow: 1;
+  border: none;
+  padding: 8px 15px;
+  outline: none;
+}
+
+.layout-principal {
+  display: flex;
+}
+
+.sidebar {
+  width: 110px;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 75px;
+  left: 0px;
+  background-color: rgb(255, 255, 255);
+}
+
+.iconoo {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px;
+}
+
+.item-palabras {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 20px 20px 20px 20px;
+  font-size: 14px;
+}
+
+.contenido {
+  flex-grow: 1;
+  background-color: #f9f9f9;
+  padding: 24px;
+  margin-left: 110px;
+}
+
+.filtros {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.filtros button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #eee;
+}
+
+.filtros button:hover {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 45px;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+}
+
+.video-info {
+  display: flex;
+  margin-top: 10px;
+  gap: 12px;
+}
+
+.channel-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.channel-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Lo puse para que la img no se deforme */
+  border-radius: 50%;
+}
+
+.videos-todos {
+  position: relative;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.time {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+.shorts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin-top: 20px;
+  gap: 6px;
+}
+
+.shorts {
+  margin-top: 30px;
+}
+
+.videos-shorts {
+  position: relative;
+  height: 400px;
+  width: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.shorts-info {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  gap: 10px;
+  width: 220px;
+}
+
+.text {
+  margin-top: 7px;
+}

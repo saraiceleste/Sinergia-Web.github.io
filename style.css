@@ -101,7 +101,6 @@ footer {
   overflow: hidden;
   margin-bottom: 30px;
   padding: 25px 30px 30px;
-  box-shadow: 0 4px 80px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   /*para q la badge se posicione dentro*/
 }
@@ -222,24 +221,50 @@ li {
 
 /*Servicios fotos*/
 #seccion-fotos {
-  box-sizing: border-box;
-  margin: 0px;
   background-color: #11398f;
-  width: 100%;
-  padding: 20px 200px 20px 200px;
+  padding: 30px 90px 30px 90px;
 }
 
-.fotos-contenedorr {
-  background-color: #3f69f3;
-  border-radius: 45px;
+/*Apliqué alineacion con flexbox*/
+.fotos-contenedor {
+  display: flex;
+  justify-content: space-around;
+  align-content: center; 
+  height: 460px; 
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 100px 0px50px 0px;
+}
+
+.fotos-badge {
+  /*posiciona mi span dentro de mi contender*/
+  position: absolute;
+  background-color: #e42716;
+  top: 10px;
+  left: 10px;
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.item-fotos {
+  position: relative;
+  background-color: #007BFF;
+  color: white;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 90px;
-  padding: 0px 0px 15px 0px;
+  border-radius: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.fotos-contenedorr:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.15);
+.item-fotos:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 25px rgb(117, 236, 91); 
+}
+
+.special{
+  flex-grow: 2; /*Lo apliqué como se mencionaba en una leccion para que esa card abarque mas espacio si hay luga extra */
 }
 
 .titulo-paquetes {
@@ -274,7 +299,7 @@ li {
 /*agregué efecto hover a los items de los servicios de video*/
 .item:hover {
   transform: translateY(-20px);
-  box-shadow: 0 0 25px rgb(255, 255, 255); /* Resplandor suave */
+  box-shadow: 0 0 25px  rgb(117, 236, 91); /* Resplandor suave */
 }
 
 /*agregué flexbox y estilos para el boton de videos destacados*/
@@ -299,25 +324,47 @@ li {
 }
 
 #contacto {
-  background-color: #11398f;
+  background-color: #3f69f3;
+  height: 370px;
 }
 
+/*Apliqué alineacion con flexbox*/
 /* FORMULARIO */
+.contacto-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contacto-aside{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px 30px 0px;
+}
+
 .form-contacto {
   background: white;
-  padding: 20px;
-  border-radius: 15px;
+  padding: 10px;
+  border-radius: 45px;
+  width: 1100px;
+}
+
+.paragraph-contact{
+  color: #3dea0d;
 }
 
 #entregas {
   text-align: center;
-  background-color: #2c5bc0;
+  background-color: #0e3384;
+  padding: 50px;
 }
 
 #acerca {
   text-align: center;
-  padding-bottom: 50px;
+  padding: 80px 100px 80px 100px;
   background-color: #2c5bc0;
+  height: 350px;
 }
 
 /* Inputs y textarea del formulario */

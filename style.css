@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 
-/* RESET BÁSICO 
-   - Elimina márgenes y padding por defecto
-   - Aplica box-sizing: border-box para que el ancho incluya padding/border
-*/
 * {
   margin: 0px;
   padding: 0px;
@@ -463,7 +459,8 @@ footer {
 .boton-carrito:hover {
   background-color: #1e6d01;
 }
-  
+
+
 /*Implementé css para un diseño responsivo*/
 @media screen and (max-width: 600px) {
    * {
@@ -581,4 +578,3 @@ footer {
     font-size: 10px;
   }
 }
-
